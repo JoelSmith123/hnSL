@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import SuggestionsSidebar from '../../containers/SuggestionsSidebar/SuggestionsSidebar.js'
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="App">
-        
+        <SuggestionsSidebar />
       </div>
     );
   }
 }
 
-export default App;
