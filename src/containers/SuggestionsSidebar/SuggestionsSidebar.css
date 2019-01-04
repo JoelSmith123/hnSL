@@ -1,0 +1,8 @@
+.SuggestionsSidebar {
+  background-color: #B9C3D8;
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.25);
+  display: flex;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+}
