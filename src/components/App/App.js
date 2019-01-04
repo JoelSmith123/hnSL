@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
 import './App.css'
 import SuggestionsSidebar from '../../containers/SuggestionsSidebar/SuggestionsSidebar.js'
 import SignIn from '../../containers/SignIn/SignIn.js'
@@ -11,7 +12,10 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <SuggestionsSidebar />
-        <SignIn />
+        <Switch>
+          <Route exact path="/"  />}/>
+          <Route exact path='/login' component={ SignIn }/>
+        </Switch>
       </div>
     );
   }
