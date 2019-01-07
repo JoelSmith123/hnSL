@@ -9,59 +9,55 @@ export class FilterSuggestions extends Component {
   constructor() {
     super()
     this.state = {
-      filterInput1: '', 
-      filterInput2: '', 
+      inputs: {'input-0': ''}
     }
   }
 
   handleChange = (e) => {
     const { name, value } = e.target
-    this.setState({
-      [name]: value
-    })
+    this.setState(prevState => ({ inputs: {...prevState.inputs, [name]: value} }))
   }
 
   handleSubmit = (e) => {
-    console.log('woooot!!!')
-    e.preventDefault()
-    const { filterInput1, filterInput2 } = this.state
-
-    this.props.setFilter(filterInput1, filterInput2)
-
-    this.setState({
-      filterInput1: '',
-      filterInput2: ''
+    this.state.inputs.forEach(input => {
+      this.props.setFilter(input)
+      const inputs = this.state.inputs.splice(input, 1) 
+      this.setState({
+        inputs
+      })
     })
   }
 
+  appendInput = () => {
+    var newInput = `input-${Object.keys(this.state.inputs).length}`;
+    this.setState(prevState => ({ inputs: {...prevState.inputs, [newInput]: ''} }));
+  }
+
   render() {
-    const {filterInput1, filterInput2} = this.state
     return (
       <div className='FilterSuggestions'>
         <h1 className='filter-title'>More filters</h1>
         <form>
-          <input name='filterInput1' 
-                 value={filterInput1} 
-                 className='filter-input-1' 
-                 placeholder='Enter title...'
-                 onChange={ this.handleChange }
-                 >
-          </input>
-          <input name='filterInput2' 
-                 value={filterInput2} 
-                 className='filter-input-2' 
-                 placeholder='Enter title...'
-                 onChange={ this.handleChange }
-                 >
-          </input>
-          <NavLink to='/results'>
-            <button className='filter-btn' 
-                    onClick={ (e)=> this.handleSubmit(e) }
-            >
-              Find suggestions
-            </button>
-            </NavLink>
+          {
+            Object.keys(this.state.inputs).map((input,index) => { 
+              return <input key={input}
+                            name={input}
+                            value={this.state.inputs[input]}
+                            className='filter-input'
+                            onChange={this.handleChange}
+                      >
+                      </input>
+            })
+          }
         </form>
+        <button onClick={() => this.appendInput()}>+</button>
+        <NavLink to='/results'
+                 onClick={ this.handleSubmit.bind(this) }
+        >
+          <button className='filter-btn'>
+            Find suggestions
+          </button>
+        </NavLink>
       </div>
     )
   }

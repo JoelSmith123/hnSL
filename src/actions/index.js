@@ -13,8 +13,7 @@ export const fetchDataSuccess = (suggestions) => ({
   suggestions
 })
 
-export const setFilter = (filterInput1, filterInput2) => ({
+export const setFilter = (filterInput) => ({
   type: 'SET_FILTER',
-  filterInput1,
-  filterInput2
+  filterInput
 })
