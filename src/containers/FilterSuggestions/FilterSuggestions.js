@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { filterReducer } from '../../reducers/filterReducer.js'
 import { setFilter } from '../../actions/index.js'
@@ -19,13 +19,9 @@ export class FilterSuggestions extends Component {
   }
 
   handleSubmit = (e) => {
-    this.state.inputs.forEach(input => {
-      this.props.setFilter(input)
-      const inputs = this.state.inputs.splice(input, 1) 
-      this.setState({
-        inputs
-      })
-    })
+    e.preventDefault()
+    this.props.setFilter(this.state.inputs)
+    this.setState({inputs: {}})
   }
 
   appendInput = () => {
@@ -34,6 +30,10 @@ export class FilterSuggestions extends Component {
   }
 
   render() {
+    if (Object.keys(this.state.inputs)[0] === undefined) {
+      return <Redirect to='/results' />
+    }
+    
     return (
       <div className='FilterSuggestions'>
         <h1 className='filter-title'>More filters</h1>
@@ -51,13 +51,7 @@ export class FilterSuggestions extends Component {
           }
         </form>
         <button onClick={() => this.appendInput()}>+</button>
-        <NavLink to='/results'
-                 onClick={ this.handleSubmit.bind(this) }
-        >
-          <button className='filter-btn'>
-            Find suggestions
-          </button>
-        </NavLink>
+        <button onClick={(e) => this.handleSubmit(e)} className='filter-btn'>Find suggestions</button>
       </div>
     )
   }

@@ -9,7 +9,6 @@ export class SuggestionsView extends Component {
     let apiKey = dataBaseKey
     let searchRequest = 'red+hot+chili+peppers%2C+pulp+fiction'
     const url = `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${searchRequest}&k=${dataBaseKey}&info=1`
-    console.log(await this.props.fetchSuggestions(url))
   }
 
   render() {
@@ -23,8 +22,7 @@ export class SuggestionsView extends Component {
 
 export const mapStateToProps = (state) => {
   return {
-    filterInput1: state.filterInput1,
-    filterInput2: state.filterInput2
+    filterInputs: state.filterInputs
   }
 }
   
