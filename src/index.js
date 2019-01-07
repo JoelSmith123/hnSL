@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
-import rootReducer from './reducers/index.js'
+import { rootReducer } from './reducers/index.js'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import './index.css';
@@ -29,14 +29,3 @@ ReactDOM.render(wrapper, document.getElementById('root'));
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-
-
-
-
-
-render(
-  <Provider store={ store } >
-    <App />
-  </Provider>,
-  document.getElementById('root')
-)
