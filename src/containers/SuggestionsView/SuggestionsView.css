@@ -1,0 +1,10 @@
+.SuggestionsView {
+  background-color: #fff;
+  height: calc(100vh - 50px);
+  margin-left: 350px;
+  width: calc(100% - 350px);  
+}
+
+.suggestions-view-title {
+  margin: 0;
+}
