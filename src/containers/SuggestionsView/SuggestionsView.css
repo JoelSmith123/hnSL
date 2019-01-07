@@ -1,8 +1,15 @@
 .SuggestionsView {
   background-color: #fff;
-  height: calc(100vh - 50px);
+  height: calc(100% - 50px);
   margin-left: 350px;
-  width: calc(100% - 350px);  
+  padding: 50px;
+}
+
+.suggestion-cards-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
 }
 
 .suggestions-view-title {

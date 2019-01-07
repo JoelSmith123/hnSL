@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { dataBaseKey }  from '../../../src/constants.js'
 import { fetchSuggestions } from '../../thunks/fetchSuggestions.js'
+import SuggestionCard from '../SuggestionCard/SuggestionCard.js'
 import './SuggestionsView.css'
 
 export class SuggestionsView extends Component {
+
   async componentDidMount() {
     let apiKey = dataBaseKey
     let searchRequest = 'red+hot+chili+peppers%2C+pulp+fiction'
@@ -16,6 +18,15 @@ export class SuggestionsView extends Component {
     return (
       <div className='SuggestionsView'>
         <h1 className='suggestions-view-title'>This is SuggestionsView</h1>
+        <div className='suggestion-cards-container'>
+          {
+            this.props.suggestions ? 
+              this.props.suggestions.Similar.Results.map(suggestion => {
+                return <SuggestionCard {...suggestion} />
+              })
+            : null
+          }
+        </div>
       </div>
     )
   }
@@ -23,7 +34,7 @@ export class SuggestionsView extends Component {
 
 export const mapStateToProps = (state) => {
   return {
-    filterInputs: state.filterInputs
+    suggestions: state.suggestions.suggestions
   }
 }
   
