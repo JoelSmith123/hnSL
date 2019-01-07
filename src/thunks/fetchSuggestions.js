@@ -10,7 +10,6 @@ export const fetchSuggestions = (url) => {
       }
       dispatch(isLoading(false))
       const suggestions = await response.json()
-      return suggestions
       dispatch(fetchDataSuccess(suggestions))
     } catch (error) {
       dispatch(hasErrored(true))

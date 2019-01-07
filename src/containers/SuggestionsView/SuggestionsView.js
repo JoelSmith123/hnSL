@@ -9,6 +9,7 @@ export class SuggestionsView extends Component {
     let apiKey = dataBaseKey
     let searchRequest = 'red+hot+chili+peppers%2C+pulp+fiction'
     const url = `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${searchRequest}&k=${dataBaseKey}&info=1`
+    await this.props.fetchSuggestions(url)
   }
 
   render() {
