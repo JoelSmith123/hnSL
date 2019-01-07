@@ -15,7 +15,6 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header />
-        <SuggestionsSidebar />
         <Switch>
           <Route exact path="/"  />}/>
           <Route exact path='/login' component={ SignIn }/>

@@ -17,7 +17,6 @@ export class SuggestionsView extends Component {
   render() {
     return (
       <div className='SuggestionsView'>
-        <h1 className='suggestions-view-title'>This is SuggestionsView</h1>
         <div className='suggestion-cards-container'>
           {
             this.props.suggestions ? 

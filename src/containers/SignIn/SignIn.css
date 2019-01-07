@@ -5,8 +5,7 @@
   flex-direction: column;
   height: calc(100vh - 50px);
   justify-content: center;
-  margin-left: 350px;
-  width: calc(100% - 350px);
+  width: 100%;
 }
 
 .sign-in-title {
