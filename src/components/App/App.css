@@ -1,4 +1,20 @@
+.App::before {
+  background-image: url('https://source.unsplash.com/collection/1127996/1600x900');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  content: '';
+  filter: blur(3px) opacity(.8);
+  height: calc(100% - 50px);
+  position: absolute;
+  right: 0;
+  width: calc(100% - 350px);
+  z-index: -1;
+}
+
 .App {
-  background-image: url('https://source.unsplash.com/collection/3149823/1600x900');
-  height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+  z-index: 0;
 }

@@ -3,7 +3,7 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100vh - 50px);
   justify-content: center;
   margin-left: 350px;
   width: calc(100% - 350px);

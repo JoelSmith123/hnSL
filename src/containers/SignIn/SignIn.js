@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import './SignIn.css'
 
 export default class SignIn extends Component {
@@ -9,7 +10,7 @@ export default class SignIn extends Component {
         <form className='sign-in-form'> 
           <input name='username' placeholder='Username'></input>
           <input name='password' placeholder='Password'></input>
-          <button className='login-btn'>login</button>
+          <NavLink to='/filter'><button className='login-btn'>login</button></NavLink>
           <h3 className='new-user-btn'>new user? make your account here!</h3>
         </form>
       </div>  
