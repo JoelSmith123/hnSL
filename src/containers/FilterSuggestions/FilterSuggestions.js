@@ -33,7 +33,7 @@ export class FilterSuggestions extends Component {
     if (Object.keys(this.state.inputs)[0] === undefined) {
       return <Redirect to='/results' />
     }
-    
+
     return (
       <div className='FilterSuggestions'>
         <h1 className='filter-title'>More filters</h1>
@@ -58,7 +58,7 @@ export class FilterSuggestions extends Component {
 }
   
 export const mapDispatchToProps = (dispatch) => ({
-  setFilter: (filterInput1, filterInput2) => dispatch(setFilter(filterInput1, filterInput2))
+  setFilter: (filterInputs) => dispatch(setFilter(filterInputs))
 })
 
 export default connect(null, mapDispatchToProps)(FilterSuggestions)
