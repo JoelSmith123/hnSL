@@ -9,7 +9,8 @@ export class FilterSuggestions extends Component {
     super()
     this.state = {
       inputs: {'input-0': ''},
-      category: ''
+      category: '',
+      activeBtn: ''
     }
   }
 
@@ -28,7 +29,21 @@ export class FilterSuggestions extends Component {
   handleClick = (e) => {
     e.preventDefault()
     const { name } = e.target
-    this.setState({category: name})
+    this.setState({category: name, activeBtn: name})
+  }
+
+  handleFormClick = (e) => {
+    e.preventDefault()
+    if (e.target !== e.currentTarget) {
+      Object.values(e.currentTarget.children).forEach(child => {
+        if (child.name !== e.target.name && child.classList.contains('category-btn')) {  
+          child.classList.remove('input-btn')
+          child.classList.add('input-btn-unactive')
+          e.target.classList.add('input-btn')
+          e.target.classList.remove('input-btn-unactive')
+        }
+      })      
+    }
   }
 
   appendInput = (e) => {
@@ -73,7 +88,7 @@ export class FilterSuggestions extends Component {
             </button>
           </div>
           <div className='filter-input-form-container'>
-            <form className='input-categories-form'>
+            <form className='input-categories-form' onClick={(e) => this.handleFormClick(e)}>
               <h3 className='filter-name-input-title filter-categories-input-title'>Enter a game, movie, band, or song</h3>
               <button className='category-btn input-btn' name='games' onClick={(e) => this.handleClick(e)}>games</button>
               <button className='category-btn input-btn' name='music' onClick={(e) => this.handleClick(e)}>music</button>

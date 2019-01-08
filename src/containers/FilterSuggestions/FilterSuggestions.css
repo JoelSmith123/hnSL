@@ -70,9 +70,31 @@
   width: 60px;  
 }
 
+.filter-btn,
+.input-btn,
+.add-input-btn,
+.category-btn {
+  transition: background-color 200ms;
+}
+
+.filter-btn:hover,
+.input-btn:hover,
+.add-input-btn:hover,
+.category-btn:hover {
+  background-color: #a5b3fe;
+}
+
+.filter-btn:active,
+.input-btn:active,
+.add-input-btn:active,
+.category-btn:active {
+  background-color: #34407f;
+}
+
+
 .input-btn {
   align-self: flex-end;
-  background: #6981FE;
+  background-color: #6981FE;
   border: none;
   border-radius: 20px;
   box-sizing: border-box;
@@ -102,8 +124,9 @@
   width: 90px;
 }
 
+
 .filter-btn {
-  background: #6981FE;
+  background-color: #6981FE;
   border: none;
   border-radius: 20px;
   box-sizing: border-box;
@@ -114,6 +137,20 @@
   height: 60px;
   margin-top: 40px;
   width: 200px;
+}
+
+
+.input-btn-unactive {
+  background-color: #808080;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  flex-basis: 100%;
+  font-family: Roboto Condensed;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 60px; 
 }
 
 
