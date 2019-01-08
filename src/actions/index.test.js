@@ -60,8 +60,6 @@ describe('actions', () => {
 
     expect(result).toEqual(mockAction)
   })
-
-
-
-
 })
+
+
