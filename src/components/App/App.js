@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
-import SuggestionsSidebar from '../../containers/SuggestionsSidebar/SuggestionsSidebar.js'
-import SignIn from '../../containers/SignIn/SignIn.js'
+import Welcome from '../../containers/Welcome/Welcome.js'
 import Header from '../../containers/Header/Header.js'
 import FilterSuggestions from '../../containers/FilterSuggestions/FilterSuggestions.js'
 import SuggestionsView from '../../containers/SuggestionsView/SuggestionsView.js'
@@ -16,8 +15,7 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path="/"  />}/>
-          <Route exact path='/login' component={ SignIn }/>
+          <Route exact path="/"  component={ Welcome }/>}/>
           <Route exact path='/filter' component={ FilterSuggestions }/>
           <Route exact path='/results' component={ SuggestionsView }/>
         </Switch>

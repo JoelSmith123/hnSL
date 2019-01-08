@@ -9,11 +9,12 @@ import './SuggestionsView.css'
 export class SuggestionsView extends Component {
 
   async componentDidMount() {
-    let searchRequest = Object.values(this.props.filters.filterInputs).map(query => {
+    const searchRequest = Object.values(this.props.filters).map(query => {
       query = query.split(/[ ]+/).join('+')
       return query
     }).join('+&2c+')
-    const url = `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${searchRequest}&k=${dataBaseKey}&info=1`
+    const category = this.props.category
+    const url = `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${searchRequest}&k=${dataBaseKey}&info=1&type=${category}`
     await this.props.fetchSuggestions(url)
   }
 
@@ -22,7 +23,7 @@ export class SuggestionsView extends Component {
       <div className='SuggestionsView'>
         <div className='suggestion-cards-container'>
           {
-            this.props.suggestions ? 
+            this.props.suggestions.Similar ? 
               this.props.suggestions.Similar.Results.map(suggestion => {
                 return <SuggestionCard {...suggestion} key={uuid()} />
               })
@@ -36,8 +37,9 @@ export class SuggestionsView extends Component {
 
 export const mapStateToProps = (state) => {
   return {
-    suggestions: state.suggestions.suggestions,
-    filters: state.filters
+    suggestions: state.suggestions,
+    filters: state.filters,
+    category: state.category
   }
 }
   

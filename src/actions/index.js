@@ -17,3 +17,8 @@ export const setFilter = (filterInputs) => ({
   type: 'SET_FILTER',
   filterInputs
 })
+
+export const setCategory = (category) => ({
+  type: 'SET_CATEGORY',
+  category
+})

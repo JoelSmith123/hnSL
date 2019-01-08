@@ -14,9 +14,22 @@
   font-size: 3rem;
 }
 
+.filter-input-categories-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 900px;
+}
+
 .filter-name-input-title {
   color: #fff;
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.filter-name-input-title-bool {
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 80px;
 }
 
 .filter-input-form-container {
@@ -27,15 +40,15 @@
   display: flex;
   margin: 0 auto;
   margin-top: 30px;
-  width: 600px;
+  width: 400px;
 }
 
 .filter-input-form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-left: 180px;
-  width: 300px;
+  padding-left: 40px;
+  width: 400px;
 }
 
 .filter-input {
@@ -51,8 +64,37 @@
 }
 
 .add-input-btn {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 30px;
+  width: 60px;  
+}
+
+.filter-btn,
+.input-btn,
+.add-input-btn,
+.category-btn {
+  transition: background-color 200ms;
+}
+
+.filter-btn:hover,
+.input-btn:hover,
+.add-input-btn:hover,
+.category-btn:hover {
+  background-color: #a5b3fe;
+}
+
+.filter-btn:active,
+.input-btn:active,
+.add-input-btn:active,
+.category-btn:active {
+  background-color: #34407f;
+}
+
+
+.input-btn {
   align-self: flex-end;
-  background: #6981FE;
+  background-color: #6981FE;
   border: none;
   border-radius: 20px;
   box-sizing: border-box;
@@ -62,14 +104,29 @@
   font-weight: bold;
   font-size: 1.5rem;
   height: 60px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 100px;
-  width: 60px;
 }
 
+.filter-categories-input-title {
+  grid-column: 1 / 4;
+}
+
+.input-categories-form {
+  display: grid;
+  grid-template-rows: 60px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+}
+
+.category-btn {
+  align-self: center;
+  margin: 10px;
+  width: 90px;
+}
+
+
 .filter-btn {
-  background: #6981FE;
+  background-color: #6981FE;
   border: none;
   border-radius: 20px;
   box-sizing: border-box;
@@ -80,6 +137,20 @@
   height: 60px;
   margin-top: 40px;
   width: 200px;
+}
+
+
+.input-btn-unactive {
+  background-color: #808080;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  flex-basis: 100%;
+  font-family: Roboto Condensed;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 60px; 
 }
 
 
