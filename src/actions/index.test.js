@@ -48,4 +48,20 @@ describe('actions', () => {
 
     expect(result).toEqual(mockAction)
   })
+
+  it('should have a type of SET_CATEGORY', () => {
+    const category = 'games'
+    const mockAction = {
+      type: 'SET_CATEGORY',
+      category: 'games'
+    }
+
+    const result = actions.setCategory(category)
+
+    expect(result).toEqual(mockAction)
+  })
+
+
+
+
 })
