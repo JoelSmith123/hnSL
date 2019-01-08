@@ -24,4 +24,16 @@ describe('actions', () => {
 
     expect(result).toEqual(mockAction)
   })
+
+  it('should have a type of FETCH_DATA_SUCCESS', () => {
+    const suggestions = [{song: 'umbrella', artist: 'Rihanna'}]
+    const mockAction = {
+      type: 'FETCH_DATA_SUCCESS',
+      suggestions: [{song: 'umbrella', artist: 'Rihanna'}]
+    }
+
+    const result = actions.fetchDataSuccess(suggestions)
+
+    expect(result).toEqual(mockAction)
+  })
 })
