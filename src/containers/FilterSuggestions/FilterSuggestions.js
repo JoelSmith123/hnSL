@@ -37,23 +37,36 @@ export class FilterSuggestions extends Component {
     return (
       <div className='FilterSuggestions'>
         <h1 className='filter-title'>Filters</h1>
-        <div className='filter-input-form-container'>
-          <form className='filter-input-form'>
-            <h3 className='filter-name-input-title'>Enter a game, movie, band, or song</h3>
-            {
-              Object.keys(this.state.inputs).map((input,index) => { 
-                return <input key={input}
-                              name={input}
-                              value={this.state.inputs[input]}
-                              className='filter-input'
-                              placeholder=''
-                              onChange={this.handleChange}
-                        >
-                        </input>
-              })
-            }
-          </form>
-          <button className='add-input-btn' disabled={Object.keys(this.state.inputs).length >= 4} onClick={(e) => this.appendInput(e)}>+</button>
+        <div className='filter-input-categories-container'>
+          <div className='filter-input-form-container'>
+            <form className='filter-input-form'>
+              <h3 className={Object.keys(this.state.inputs).length === 1 ? 'filter-name-input-title-bool' : 'filter-name-input-title'}>Enter a game, movie, band, or song</h3>
+              {
+                Object.keys(this.state.inputs).map((input,index) => { 
+                  return <input key={input}
+                                name={input}
+                                value={this.state.inputs[input]}
+                                className='filter-input'
+                                placeholder=''
+                                onChange={this.handleChange}
+                          >
+                          </input>
+                })
+              }
+            </form>
+            <button className='add-input-btn input-btn' disabled={Object.keys(this.state.inputs).length >= 4} onClick={(e) => this.appendInput(e)}>+</button>
+          </div>
+          <div className='filter-input-form-container'>
+            <form className='input-categories-form'>
+              <h3 className='filter-name-input-title filter-categories-input-title'>Enter a game, movie, band, or song</h3>
+              <button className='category-btn input-btn'>games</button>
+              <button className='category-btn input-btn'>music</button>
+              <button className='category-btn input-btn'>authors</button>
+              <button className='category-btn input-btn'>movies</button>
+              <button className='category-btn input-btn'>shows</button>
+              <button className='category-btn input-btn'>books</button>
+            </form>
+          </div>
         </div>
         <button className='filter-btn' onClick={(e) => this.handleSubmit(e)}>Find suggestions</button>
       </div>

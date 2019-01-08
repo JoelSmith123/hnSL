@@ -14,9 +14,22 @@
   font-size: 3rem;
 }
 
+.filter-input-categories-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 900px;
+}
+
 .filter-name-input-title {
   color: #fff;
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.filter-name-input-title-bool {
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 80px;
 }
 
 .filter-input-form-container {
@@ -27,15 +40,15 @@
   display: flex;
   margin: 0 auto;
   margin-top: 30px;
-  width: 600px;
+  width: 400px;
 }
 
 .filter-input-form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-left: 180px;
-  width: 300px;
+  padding-left: 40px;
+  width: 400px;
 }
 
 .filter-input {
@@ -51,6 +64,13 @@
 }
 
 .add-input-btn {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 30px;
+  width: 60px;  
+}
+
+.input-btn {
   align-self: flex-end;
   background: #6981FE;
   border: none;
@@ -62,10 +82,24 @@
   font-weight: bold;
   font-size: 1.5rem;
   height: 60px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 100px;
-  width: 60px;
+}
+
+.filter-categories-input-title {
+  grid-column: 1 / 4;
+}
+
+.input-categories-form {
+  display: grid;
+  grid-template-rows: 60px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+}
+
+.category-btn {
+  align-self: center;
+  margin: 10px;
+  width: 90px;
 }
 
 .filter-btn {
