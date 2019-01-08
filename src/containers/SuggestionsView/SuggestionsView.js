@@ -9,7 +9,7 @@ import './SuggestionsView.css'
 export class SuggestionsView extends Component {
 
   async componentDidMount() {
-    let searchRequest = Object.values(this.props.filters.filterInputs).map(query => {
+    let searchRequest = Object.values(this.props.filters).map(query => {
       query = query.split(/[ ]+/).join('+')
       return query
     }).join('+&2c+')
@@ -22,7 +22,7 @@ export class SuggestionsView extends Component {
       <div className='SuggestionsView'>
         <div className='suggestion-cards-container'>
           {
-            this.props.suggestions ? 
+            this.props.suggestions.Similar ? 
               this.props.suggestions.Similar.Results.map(suggestion => {
                 return <SuggestionCard {...suggestion} key={uuid()} />
               })
@@ -36,7 +36,7 @@ export class SuggestionsView extends Component {
 
 export const mapStateToProps = (state) => {
   return {
-    suggestions: state.suggestions.suggestions,
+    suggestions: state.suggestions,
     filters: state.filters
   }
 }
