@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { setFilter } from '../../actions/index.js'
+import { setFilter, setCategory } from '../../actions/index.js'
 import './FilterSuggestions.css'
 
 export class FilterSuggestions extends Component {
@@ -90,7 +90,8 @@ export class FilterSuggestions extends Component {
 }
   
 export const mapDispatchToProps = (dispatch) => ({
-  setFilter: (filterInputs) => dispatch(setFilter(filterInputs))
+  setFilter: (filterInputs) => dispatch(setFilter(filterInputs)),
+  setCategory: (category) => dispatch(setCategory(category))
 })
 
 export default connect(null, mapDispatchToProps)(FilterSuggestions)
