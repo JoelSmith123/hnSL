@@ -36,7 +36,7 @@ export class FilterSuggestions extends Component {
 
     return (
       <div className='FilterSuggestions'>
-        <h1 className='filter-title'>More filters</h1>
+        <h1 className='filter-title'>Filters</h1>
         <div className='filter-input-form-container'>
           <form className='filter-input-form'>
             <h3 className='filter-name-input-title'>Enter a game, movie, band, or song</h3>
