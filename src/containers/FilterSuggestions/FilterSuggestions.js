@@ -21,7 +21,8 @@ export class FilterSuggestions extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.setFilter(this.state.inputs)
-    this.setState({inputs: {}})
+    this.props.setCategory(this.state.category)
+    this.setState({category: '', inputs: {}})
   }
 
   handleClick = (e) => {
