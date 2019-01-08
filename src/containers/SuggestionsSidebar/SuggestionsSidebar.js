@@ -6,7 +6,7 @@ export default class SuggestionsSidebar extends Component {
   render() {
     return (
       <div className='SuggestionsSidebar'>
-        <SuggestionCard />
+        
       </div>
     )
   }

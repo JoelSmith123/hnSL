@@ -9,7 +9,7 @@
   height: calc(100% - 50px);
   position: absolute;
   right: 0;
-  width: calc(100% - 350px);
+  width: 100%;
   z-index: -1;
 }
 
