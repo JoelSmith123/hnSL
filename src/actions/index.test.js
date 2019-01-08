@@ -13,4 +13,15 @@ describe('actions', () => {
     expect(result).toEqual(mockAction)
   })
 
+  it('should have a type of HAS_ERRORED', () => {
+    const hasErrored = true
+    const mockAction = {
+      type: 'HAS_ERRORED',
+      hasErrored: true
+    }
+
+    const result = actions.hasErrored(hasErrored)
+
+    expect(result).toEqual(mockAction)
+  })
 })
