@@ -9,7 +9,6 @@ import './SuggestionsView.css'
 export class SuggestionsView extends Component {
 
   async componentDidMount() {
-    let apiKey = dataBaseKey
     let searchRequest = Object.values(this.props.filters.filterInputs).map(query => {
       query = query.split(/[ ]+/).join('+')
       return query

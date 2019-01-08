@@ -4,8 +4,8 @@
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 70px 1fr 50px;
-  height: 300px;
+  grid-template-rows: 90px 1fr 50px;
+  height: 350px;
   margin-bottom: 30px;
   padding: 20px;
   width: 500px;
@@ -41,7 +41,6 @@
 }
 
 .suggestion-card-description {
-  border-radius: 10px;
   cursor: default;
   font-family: 'Roboto', sans-serif;
   grid-column: 2 / 3;
@@ -51,3 +50,18 @@
   transition: box-shadow 500ms;
   padding: 10px;
 }
+
+.suggestion-card-description:hover {
+  box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 1);
+}
+
+.suggestion-card-description-scroll-indication {
+  color: blue;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  height: 20px;
+  margin-top: 130px;
+  text-decoration: underline;
+}
+
+

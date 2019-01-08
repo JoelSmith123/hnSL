@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+.Header * {
+  text-decoration: none;
+}
+
 .header-title {
   color: #fff;
   margin: 0;
