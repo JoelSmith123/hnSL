@@ -36,4 +36,16 @@ describe('actions', () => {
 
     expect(result).toEqual(mockAction)
   })
+
+  it('should have a type of SET_FILTER', () => {
+    const filterInputs = {'input-0':'green day', 'input-1':'foo fighters'}
+    const mockAction = {
+      type: 'SET_FILTER',
+      filterInputs: {'input-0':'green day', 'input-1':'foo fighters'}
+    }
+
+    const result = actions.setFilter(filterInputs)
+
+    expect(result).toEqual(mockAction)
+  })
 })
