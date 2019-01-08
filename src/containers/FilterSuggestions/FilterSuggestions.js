@@ -8,7 +8,8 @@ export class FilterSuggestions extends Component {
   constructor() {
     super()
     this.state = {
-      inputs: {'input-0': ''}
+      inputs: {'input-0': ''},
+      category: ''
     }
   }
 
@@ -21,6 +22,12 @@ export class FilterSuggestions extends Component {
     e.preventDefault()
     this.props.setFilter(this.state.inputs)
     this.setState({inputs: {}})
+  }
+
+  handleClick = (e) => {
+    e.preventDefault()
+    const { name } = e.target
+    this.setState({category: name})
   }
 
   appendInput = (e) => {
@@ -40,7 +47,11 @@ export class FilterSuggestions extends Component {
         <div className='filter-input-categories-container'>
           <div className='filter-input-form-container'>
             <form className='filter-input-form'>
-              <h3 className={Object.keys(this.state.inputs).length === 1 ? 'filter-name-input-title-bool' : 'filter-name-input-title'}>Enter a game, movie, band, or song</h3>
+              <h3 className={Object.keys(this.state.inputs).length === 1 ?
+                               'filter-name-input-title-bool' : 
+                               'filter-name-input-title'}>
+                  Enter a game, movie, band, or song
+              </h3>
               {
                 Object.keys(this.state.inputs).map((input,index) => { 
                   return <input key={input}
@@ -54,17 +65,21 @@ export class FilterSuggestions extends Component {
                 })
               }
             </form>
-            <button className='add-input-btn input-btn' disabled={Object.keys(this.state.inputs).length >= 4} onClick={(e) => this.appendInput(e)}>+</button>
+            <button className='add-input-btn input-btn' 
+                    disabled={Object.keys(this.state.inputs).length >= 4} 
+                    onClick={(e) => this.appendInput(e)}>
+              +
+            </button>
           </div>
           <div className='filter-input-form-container'>
             <form className='input-categories-form'>
               <h3 className='filter-name-input-title filter-categories-input-title'>Enter a game, movie, band, or song</h3>
-              <button className='category-btn input-btn'>games</button>
-              <button className='category-btn input-btn'>music</button>
-              <button className='category-btn input-btn'>authors</button>
-              <button className='category-btn input-btn'>movies</button>
-              <button className='category-btn input-btn'>shows</button>
-              <button className='category-btn input-btn'>books</button>
+              <button className='category-btn input-btn' name='games' onClick={(e) => this.handleClick(e)}>games</button>
+              <button className='category-btn input-btn' name='music' onClick={(e) => this.handleClick(e)}>music</button>
+              <button className='category-btn input-btn' name='authors' onClick={(e) => this.handleClick(e)}>authors</button>
+              <button className='category-btn input-btn' name='movies' onClick={(e) => this.handleClick(e)}>movies</button>
+              <button className='category-btn input-btn' name='shows' onClick={(e) => this.handleClick(e)}>shows</button>
+              <button className='category-btn input-btn' name='books' onClick={(e) => this.handleClick(e)}>books</button>
             </form>
           </div>
         </div>
