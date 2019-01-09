@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
-import Welcome from '../../containers/Welcome/Welcome.js'
-import Header from '../../containers/Header/Header.js'
+import Welcome from '../Welcome/Welcome.js'
+import Header from '../Header/Header.js'
 import FilterSuggestions from '../../containers/FilterSuggestions/FilterSuggestions.js'
 import SuggestionsView from '../../containers/SuggestionsView/SuggestionsView.js'
 

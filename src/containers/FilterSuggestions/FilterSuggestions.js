@@ -23,7 +23,7 @@ export class FilterSuggestions extends Component {
     e.preventDefault()
     this.props.setFilter(this.state.inputs)
     this.props.setCategory(this.state.category)
-    this.setState({category: '', inputs: {}})
+    this.setState({activeBtn: '', category: '', inputs: {}})
   }
 
   handleClick = (e) => {

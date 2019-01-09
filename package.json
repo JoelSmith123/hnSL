@@ -2,6 +2,15 @@
   "name": "hnsl",
   "version": "0.1.0",
   "private": true,
+    "jest": {
+    "collectCoverageFrom": [
+      "src/actions/*.js",
+      "src/components/**/*.js",
+      "src/reducers/*Reducer.js",
+      "src/thunks/*.js",
+      "src/containers/**/*.js"
+    ]
+  },
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
