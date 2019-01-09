@@ -2,8 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { dataBaseKey }  from '../../../src/constants.js'
 import { SuggestionsView, mapStateToProps, mapDispatchToProps } from './SuggestionsView.js'
-import { fetchSuggestions } from '../../thunks/fetchSuggestions.js'
-
+jest.mock('../../thunks/fetchSuggestions.js')
 
 describe('SuggestionsView', () => {
   let mockFetch
