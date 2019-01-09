@@ -2,6 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { dataBaseKey }  from '../../../src/constants.js'
 import { SuggestionsView, mapStateToProps, mapDispatchToProps } from './SuggestionsView.js'
+import { fetchSuggestions } from '../../thunks/fetchSuggestions.js'
 jest.mock('../../thunks/fetchSuggestions.js')
 
 describe('SuggestionsView', () => {
@@ -54,8 +55,8 @@ describe('mapStateToProps', () => {
   })
 })
 
-describe.skip('mapDispatchToProps', () => {
-  it.skip('calls dispatch with a fetchSuggestions action when fetchSuggestions is called', () => {
+describe('mapDispatchToProps', () => {
+  it('calls dispatch with a fetchSuggestions action when fetchSuggestions is called', () => {
     const mockDispatch = jest.fn()
     const mockUrl = 'www.google.com'
     const actionToDispatch = fetchSuggestions(mockUrl)
@@ -66,3 +67,4 @@ describe.skip('mapDispatchToProps', () => {
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 })
+
