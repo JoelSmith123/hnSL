@@ -10,7 +10,7 @@ export class FilterSuggestions extends Component {
     this.state = {
       inputs: {'input-0': ''},
       category: '',
-      activeBtn: ''
+      activeBtn: '',
     }
   }
 
@@ -20,7 +20,9 @@ export class FilterSuggestions extends Component {
   }
 
   handleSubmit = (e) => {
+    console.log('ran!!')
     e.preventDefault()
+    console.log(this.state.category[0])
     this.props.setFilter(this.state.inputs)
     this.props.setCategory(this.state.category)
     this.setState({activeBtn: '', category: '', inputs: {}})
@@ -52,13 +54,20 @@ export class FilterSuggestions extends Component {
     this.setState(prevState => ({ inputs: {...prevState.inputs, [newInput]: ''} }));
   }
 
+  enterPressed = (e) => {
+    var code = e.keyCode || e.which;
+    if(code === 13) { 
+      this.handleSubmit(e)
+    } 
+  }
+
   render() {
     if (Object.keys(this.state.inputs)[0] === undefined) {
       return <Redirect to='/results' />
     }
 
     return (
-      <div className='FilterSuggestions' onSubmit={(e) => this.handleSubmit(e)}>
+      <div className='FilterSuggestions' onKeyPress={this.enterPressed.bind(this)}>
         <h1 className='filter-title'>Filters</h1>
         <div className='filter-input-categories-container'>
           <div className='filter-input-form-container'>
@@ -100,7 +109,7 @@ export class FilterSuggestions extends Component {
             </form>
           </div>
         </div>
-        <button className='filter-btn' type='submit'>Find suggestions</button>
+        <button className='filter-btn' type='submit' onClick={(e) => this.handleSubmit(e)}>Find suggestions</button>
       </div>
     )
   }
