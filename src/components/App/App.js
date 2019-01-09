@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { RouteNoMatch } from '../RouteNoMatch/RouteNoMatch'
 import './App.css'
 import Welcome from '../Welcome/Welcome.js'
 import Header from '../Header/Header.js'
@@ -18,6 +19,7 @@ export default class App extends Component {
           <Route exact path="/"  component={ Welcome }/>}/>
           <Route exact path='/filter' component={ FilterSuggestions }/>
           <Route exact path='/results' component={ SuggestionsView }/>
+          <Route component={ RouteNoMatch } />
         </Switch>
       </div>
     );

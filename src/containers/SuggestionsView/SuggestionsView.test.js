@@ -3,27 +3,33 @@ import { shallow } from 'enzyme'
 import { dataBaseKey }  from '../../../src/constants.js'
 import { SuggestionsView, mapStateToProps, mapDispatchToProps } from './SuggestionsView.js'
 import { fetchSuggestions } from '../../thunks/fetchSuggestions.js'
-
+jest.mock('../../thunks/fetchSuggestions.js')
 
 describe('SuggestionsView', () => {
   let mockFetch
+  let mockFilters
   let wrapper
 
   beforeEach(() => {
     mockFetch = jest.fn()
-    wrapper = shallow(<SuggestionsView suggestions={[{movie: 'movie-one'}]} fetchSuggestions={ mockFetch }/>)
+    mockFilters = {'input-0': 'red hot chili peppers', 'input-1': 'pulp fiction'}
+    wrapper = shallow(<SuggestionsView suggestions={[{movie: 'movie-one'}]} 
+                                       fetchSuggestions={ mockFetch } 
+                                       filters={ mockFilters } 
+                                       category={'movies'}
+                      />)
   })
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it.skip('should call fetchSuggestions on componentDidMount', () => {
-    const searchRequest = 'red+hot+chili+peppers%2C+pulp+fiction'
+  it('should call fetchSuggestions on componentDidMount', async () => {
+    const searchRequest = 'red+hot+chili+peppers+&2c+pulp+fiction'
     const category = 'movies'
     const url = `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${searchRequest}&k=${dataBaseKey}&info=1&type=${category}`
 
-    wrapper.instance().componentDidMount()
+    await wrapper.instance().componentDidMount()
 
     expect(mockFetch).toHaveBeenCalledWith(url)
   })
@@ -49,8 +55,8 @@ describe('mapStateToProps', () => {
   })
 })
 
-describe.skip('mapDispatchToProps', () => {
-  it.skip('calls dispatch with a fetchSuggestions action when fetchSuggestions is called', () => {
+describe('mapDispatchToProps', () => {
+  it('calls dispatch with a fetchSuggestions action when fetchSuggestions is called', () => {
     const mockDispatch = jest.fn()
     const mockUrl = 'www.google.com'
     const actionToDispatch = fetchSuggestions(mockUrl)
@@ -61,3 +67,4 @@ describe.skip('mapDispatchToProps', () => {
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 })
+

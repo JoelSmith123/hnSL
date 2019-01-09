@@ -26,6 +26,7 @@ ShallowWrapper {
         >
           Filters
         </h1>,
+        null,
         <div
           className="filter-input-categories-container"
         >
@@ -52,6 +53,7 @@ ShallowWrapper {
               className="add-input-btn input-btn"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               +
             </button>
@@ -66,12 +68,13 @@ ShallowWrapper {
               <h3
                 className="filter-name-input-title filter-categories-input-title"
               >
-                Enter a game, movie, band, or song
+                Select a category
               </h3>
               <button
                 className="category-btn input-btn"
                 name="games"
                 onClick={[Function]}
+                type="button"
               >
                 games
               </button>
@@ -79,6 +82,7 @@ ShallowWrapper {
                 className="category-btn input-btn"
                 name="music"
                 onClick={[Function]}
+                type="button"
               >
                 music
               </button>
@@ -86,6 +90,7 @@ ShallowWrapper {
                 className="category-btn input-btn"
                 name="authors"
                 onClick={[Function]}
+                type="button"
               >
                 authors
               </button>
@@ -93,6 +98,7 @@ ShallowWrapper {
                 className="category-btn input-btn"
                 name="movies"
                 onClick={[Function]}
+                type="button"
               >
                 movies
               </button>
@@ -100,6 +106,7 @@ ShallowWrapper {
                 className="category-btn input-btn"
                 name="shows"
                 onClick={[Function]}
+                type="button"
               >
                 shows
               </button>
@@ -107,6 +114,7 @@ ShallowWrapper {
                 className="category-btn input-btn"
                 name="books"
                 onClick={[Function]}
+                type="button"
               >
                 books
               </button>
@@ -116,11 +124,13 @@ ShallowWrapper {
         <button
           className="filter-btn"
           onClick={[Function]}
+          type="submit"
         >
           Find suggestions
         </button>,
       ],
       "className": "FilterSuggestions",
+      "onKeyPress": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -136,6 +146,7 @@ ShallowWrapper {
         "rendered": "Filters",
         "type": "h1",
       },
+      null,
       Object {
         "instance": null,
         "key": undefined,
@@ -165,6 +176,7 @@ ShallowWrapper {
                 className="add-input-btn input-btn"
                 disabled={false}
                 onClick={[Function]}
+                type="button"
               >
                 +
               </button>
@@ -179,12 +191,13 @@ ShallowWrapper {
                 <h3
                   className="filter-name-input-title filter-categories-input-title"
                 >
-                  Enter a game, movie, band, or song
+                  Select a category
                 </h3>
                 <button
                   className="category-btn input-btn"
                   name="games"
                   onClick={[Function]}
+                  type="button"
                 >
                   games
                 </button>
@@ -192,6 +205,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="music"
                   onClick={[Function]}
+                  type="button"
                 >
                   music
                 </button>
@@ -199,6 +213,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="authors"
                   onClick={[Function]}
+                  type="button"
                 >
                   authors
                 </button>
@@ -206,6 +221,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="movies"
                   onClick={[Function]}
+                  type="button"
                 >
                   movies
                 </button>
@@ -213,6 +229,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="shows"
                   onClick={[Function]}
+                  type="button"
                 >
                   shows
                 </button>
@@ -220,6 +237,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="books"
                   onClick={[Function]}
+                  type="button"
                 >
                   books
                 </button>
@@ -256,6 +274,7 @@ ShallowWrapper {
                   className="add-input-btn input-btn"
                   disabled={false}
                   onClick={[Function]}
+                  type="button"
                 >
                   +
                 </button>,
@@ -328,6 +347,7 @@ ShallowWrapper {
                   "className": "add-input-btn input-btn",
                   "disabled": false,
                   "onClick": [Function],
+                  "type": "button",
                 },
                 "ref": null,
                 "rendered": "+",
@@ -348,12 +368,13 @@ ShallowWrapper {
                 <h3
                   className="filter-name-input-title filter-categories-input-title"
                 >
-                  Enter a game, movie, band, or song
+                  Select a category
                 </h3>
                 <button
                   className="category-btn input-btn"
                   name="games"
                   onClick={[Function]}
+                  type="button"
                 >
                   games
                 </button>
@@ -361,6 +382,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="music"
                   onClick={[Function]}
+                  type="button"
                 >
                   music
                 </button>
@@ -368,6 +390,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="authors"
                   onClick={[Function]}
+                  type="button"
                 >
                   authors
                 </button>
@@ -375,6 +398,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="movies"
                   onClick={[Function]}
+                  type="button"
                 >
                   movies
                 </button>
@@ -382,6 +406,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="shows"
                   onClick={[Function]}
+                  type="button"
                 >
                   shows
                 </button>
@@ -389,6 +414,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="books"
                   onClick={[Function]}
+                  type="button"
                 >
                   books
                 </button>
@@ -405,12 +431,13 @@ ShallowWrapper {
                   <h3
                     className="filter-name-input-title filter-categories-input-title"
                   >
-                    Enter a game, movie, band, or song
+                    Select a category
                   </h3>,
                   <button
                     className="category-btn input-btn"
                     name="games"
                     onClick={[Function]}
+                    type="button"
                   >
                     games
                   </button>,
@@ -418,6 +445,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="music"
                     onClick={[Function]}
+                    type="button"
                   >
                     music
                   </button>,
@@ -425,6 +453,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="authors"
                     onClick={[Function]}
+                    type="button"
                   >
                     authors
                   </button>,
@@ -432,6 +461,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="movies"
                     onClick={[Function]}
+                    type="button"
                   >
                     movies
                   </button>,
@@ -439,6 +469,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="shows"
                     onClick={[Function]}
+                    type="button"
                   >
                     shows
                   </button>,
@@ -446,6 +477,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="books"
                     onClick={[Function]}
+                    type="button"
                   >
                     books
                   </button>,
@@ -460,11 +492,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Enter a game, movie, band, or song",
+                    "children": "Select a category",
                     "className": "filter-name-input-title filter-categories-input-title",
                   },
                   "ref": null,
-                  "rendered": "Enter a game, movie, band, or song",
+                  "rendered": "Select a category",
                   "type": "h3",
                 },
                 Object {
@@ -476,6 +508,7 @@ ShallowWrapper {
                     "className": "category-btn input-btn",
                     "name": "games",
                     "onClick": [Function],
+                    "type": "button",
                   },
                   "ref": null,
                   "rendered": "games",
@@ -490,6 +523,7 @@ ShallowWrapper {
                     "className": "category-btn input-btn",
                     "name": "music",
                     "onClick": [Function],
+                    "type": "button",
                   },
                   "ref": null,
                   "rendered": "music",
@@ -504,6 +538,7 @@ ShallowWrapper {
                     "className": "category-btn input-btn",
                     "name": "authors",
                     "onClick": [Function],
+                    "type": "button",
                   },
                   "ref": null,
                   "rendered": "authors",
@@ -518,6 +553,7 @@ ShallowWrapper {
                     "className": "category-btn input-btn",
                     "name": "movies",
                     "onClick": [Function],
+                    "type": "button",
                   },
                   "ref": null,
                   "rendered": "movies",
@@ -532,6 +568,7 @@ ShallowWrapper {
                     "className": "category-btn input-btn",
                     "name": "shows",
                     "onClick": [Function],
+                    "type": "button",
                   },
                   "ref": null,
                   "rendered": "shows",
@@ -546,6 +583,7 @@ ShallowWrapper {
                     "className": "category-btn input-btn",
                     "name": "books",
                     "onClick": [Function],
+                    "type": "button",
                   },
                   "ref": null,
                   "rendered": "books",
@@ -567,6 +605,7 @@ ShallowWrapper {
           "children": "Find suggestions",
           "className": "filter-btn",
           "onClick": [Function],
+          "type": "submit",
         },
         "ref": null,
         "rendered": "Find suggestions",
@@ -587,6 +626,7 @@ ShallowWrapper {
           >
             Filters
           </h1>,
+          null,
           <div
             className="filter-input-categories-container"
           >
@@ -613,6 +653,7 @@ ShallowWrapper {
                 className="add-input-btn input-btn"
                 disabled={false}
                 onClick={[Function]}
+                type="button"
               >
                 +
               </button>
@@ -627,12 +668,13 @@ ShallowWrapper {
                 <h3
                   className="filter-name-input-title filter-categories-input-title"
                 >
-                  Enter a game, movie, band, or song
+                  Select a category
                 </h3>
                 <button
                   className="category-btn input-btn"
                   name="games"
                   onClick={[Function]}
+                  type="button"
                 >
                   games
                 </button>
@@ -640,6 +682,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="music"
                   onClick={[Function]}
+                  type="button"
                 >
                   music
                 </button>
@@ -647,6 +690,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="authors"
                   onClick={[Function]}
+                  type="button"
                 >
                   authors
                 </button>
@@ -654,6 +698,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="movies"
                   onClick={[Function]}
+                  type="button"
                 >
                   movies
                 </button>
@@ -661,6 +706,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="shows"
                   onClick={[Function]}
+                  type="button"
                 >
                   shows
                 </button>
@@ -668,6 +714,7 @@ ShallowWrapper {
                   className="category-btn input-btn"
                   name="books"
                   onClick={[Function]}
+                  type="button"
                 >
                   books
                 </button>
@@ -677,11 +724,13 @@ ShallowWrapper {
           <button
             className="filter-btn"
             onClick={[Function]}
+            type="submit"
           >
             Find suggestions
           </button>,
         ],
         "className": "FilterSuggestions",
+        "onKeyPress": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -697,6 +746,7 @@ ShallowWrapper {
           "rendered": "Filters",
           "type": "h1",
         },
+        null,
         Object {
           "instance": null,
           "key": undefined,
@@ -726,6 +776,7 @@ ShallowWrapper {
                   className="add-input-btn input-btn"
                   disabled={false}
                   onClick={[Function]}
+                  type="button"
                 >
                   +
                 </button>
@@ -740,12 +791,13 @@ ShallowWrapper {
                   <h3
                     className="filter-name-input-title filter-categories-input-title"
                   >
-                    Enter a game, movie, band, or song
+                    Select a category
                   </h3>
                   <button
                     className="category-btn input-btn"
                     name="games"
                     onClick={[Function]}
+                    type="button"
                   >
                     games
                   </button>
@@ -753,6 +805,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="music"
                     onClick={[Function]}
+                    type="button"
                   >
                     music
                   </button>
@@ -760,6 +813,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="authors"
                     onClick={[Function]}
+                    type="button"
                   >
                     authors
                   </button>
@@ -767,6 +821,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="movies"
                     onClick={[Function]}
+                    type="button"
                   >
                     movies
                   </button>
@@ -774,6 +829,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="shows"
                     onClick={[Function]}
+                    type="button"
                   >
                     shows
                   </button>
@@ -781,6 +837,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="books"
                     onClick={[Function]}
+                    type="button"
                   >
                     books
                   </button>
@@ -817,6 +874,7 @@ ShallowWrapper {
                     className="add-input-btn input-btn"
                     disabled={false}
                     onClick={[Function]}
+                    type="button"
                   >
                     +
                   </button>,
@@ -889,6 +947,7 @@ ShallowWrapper {
                     "className": "add-input-btn input-btn",
                     "disabled": false,
                     "onClick": [Function],
+                    "type": "button",
                   },
                   "ref": null,
                   "rendered": "+",
@@ -909,12 +968,13 @@ ShallowWrapper {
                   <h3
                     className="filter-name-input-title filter-categories-input-title"
                   >
-                    Enter a game, movie, band, or song
+                    Select a category
                   </h3>
                   <button
                     className="category-btn input-btn"
                     name="games"
                     onClick={[Function]}
+                    type="button"
                   >
                     games
                   </button>
@@ -922,6 +982,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="music"
                     onClick={[Function]}
+                    type="button"
                   >
                     music
                   </button>
@@ -929,6 +990,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="authors"
                     onClick={[Function]}
+                    type="button"
                   >
                     authors
                   </button>
@@ -936,6 +998,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="movies"
                     onClick={[Function]}
+                    type="button"
                   >
                     movies
                   </button>
@@ -943,6 +1006,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="shows"
                     onClick={[Function]}
+                    type="button"
                   >
                     shows
                   </button>
@@ -950,6 +1014,7 @@ ShallowWrapper {
                     className="category-btn input-btn"
                     name="books"
                     onClick={[Function]}
+                    type="button"
                   >
                     books
                   </button>
@@ -966,12 +1031,13 @@ ShallowWrapper {
                     <h3
                       className="filter-name-input-title filter-categories-input-title"
                     >
-                      Enter a game, movie, band, or song
+                      Select a category
                     </h3>,
                     <button
                       className="category-btn input-btn"
                       name="games"
                       onClick={[Function]}
+                      type="button"
                     >
                       games
                     </button>,
@@ -979,6 +1045,7 @@ ShallowWrapper {
                       className="category-btn input-btn"
                       name="music"
                       onClick={[Function]}
+                      type="button"
                     >
                       music
                     </button>,
@@ -986,6 +1053,7 @@ ShallowWrapper {
                       className="category-btn input-btn"
                       name="authors"
                       onClick={[Function]}
+                      type="button"
                     >
                       authors
                     </button>,
@@ -993,6 +1061,7 @@ ShallowWrapper {
                       className="category-btn input-btn"
                       name="movies"
                       onClick={[Function]}
+                      type="button"
                     >
                       movies
                     </button>,
@@ -1000,6 +1069,7 @@ ShallowWrapper {
                       className="category-btn input-btn"
                       name="shows"
                       onClick={[Function]}
+                      type="button"
                     >
                       shows
                     </button>,
@@ -1007,6 +1077,7 @@ ShallowWrapper {
                       className="category-btn input-btn"
                       name="books"
                       onClick={[Function]}
+                      type="button"
                     >
                       books
                     </button>,
@@ -1021,11 +1092,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Enter a game, movie, band, or song",
+                      "children": "Select a category",
                       "className": "filter-name-input-title filter-categories-input-title",
                     },
                     "ref": null,
-                    "rendered": "Enter a game, movie, band, or song",
+                    "rendered": "Select a category",
                     "type": "h3",
                   },
                   Object {
@@ -1037,6 +1108,7 @@ ShallowWrapper {
                       "className": "category-btn input-btn",
                       "name": "games",
                       "onClick": [Function],
+                      "type": "button",
                     },
                     "ref": null,
                     "rendered": "games",
@@ -1051,6 +1123,7 @@ ShallowWrapper {
                       "className": "category-btn input-btn",
                       "name": "music",
                       "onClick": [Function],
+                      "type": "button",
                     },
                     "ref": null,
                     "rendered": "music",
@@ -1065,6 +1138,7 @@ ShallowWrapper {
                       "className": "category-btn input-btn",
                       "name": "authors",
                       "onClick": [Function],
+                      "type": "button",
                     },
                     "ref": null,
                     "rendered": "authors",
@@ -1079,6 +1153,7 @@ ShallowWrapper {
                       "className": "category-btn input-btn",
                       "name": "movies",
                       "onClick": [Function],
+                      "type": "button",
                     },
                     "ref": null,
                     "rendered": "movies",
@@ -1093,6 +1168,7 @@ ShallowWrapper {
                       "className": "category-btn input-btn",
                       "name": "shows",
                       "onClick": [Function],
+                      "type": "button",
                     },
                     "ref": null,
                     "rendered": "shows",
@@ -1107,6 +1183,7 @@ ShallowWrapper {
                       "className": "category-btn input-btn",
                       "name": "books",
                       "onClick": [Function],
+                      "type": "button",
                     },
                     "ref": null,
                     "rendered": "books",
@@ -1128,6 +1205,7 @@ ShallowWrapper {
             "children": "Find suggestions",
             "className": "filter-btn",
             "onClick": [Function],
+            "type": "submit",
           },
           "ref": null,
           "rendered": "Find suggestions",

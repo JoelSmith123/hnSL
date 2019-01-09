@@ -10,7 +10,8 @@ export class FilterSuggestions extends Component {
     this.state = {
       inputs: {'input-0': ''},
       category: '',
-      activeBtn: ''
+      activeBtn: '',
+      error: false
     }
   }
 
@@ -21,9 +22,13 @@ export class FilterSuggestions extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.setFilter(this.state.inputs)
-    this.props.setCategory(this.state.category)
-    this.setState({activeBtn: '', category: '', inputs: {}})
+    if (!this.state.inputs['input-0']) {
+      this.setState({error: true})
+    } else {
+      this.props.setFilter(this.state.inputs)
+      this.props.setCategory(this.state.category)
+      this.setState({activeBtn: '', category: '', inputs: {}, error: false})      
+    }
   }
 
   handleClick = (e) => {
@@ -52,14 +57,26 @@ export class FilterSuggestions extends Component {
     this.setState(prevState => ({ inputs: {...prevState.inputs, [newInput]: ''} }));
   }
 
+  enterPressed = (e) => {
+    var code = e.keyCode || e.which;
+    if(code === 13) { 
+      this.handleSubmit(e)
+    } 
+  }
+
   render() {
     if (Object.keys(this.state.inputs)[0] === undefined) {
       return <Redirect to='/results' />
     }
 
     return (
-      <div className='FilterSuggestions'>
+      <div className='FilterSuggestions' onKeyPress={this.enterPressed.bind(this)}>
         <h1 className='filter-title'>Filters</h1>
+        {
+          this.state.error ? 
+            <h2 className='status-msg'>Sorry! You must enter a game, movie, band, or song to retrieve suggestions</h2>
+          : null
+        }
         <div className='filter-input-categories-container'>
           <div className='filter-input-form-container'>
             <form className='filter-input-form'>
@@ -82,6 +99,7 @@ export class FilterSuggestions extends Component {
               }
             </form>
             <button className='add-input-btn input-btn' 
+                    type='button'
                     disabled={Object.keys(this.state.inputs).length >= 4} 
                     onClick={(e) => this.appendInput(e)}>
               +
@@ -89,17 +107,17 @@ export class FilterSuggestions extends Component {
           </div>
           <div className='filter-input-form-container'>
             <form className='input-categories-form' onClick={(e) => this.handleFormClick(e)}>
-              <h3 className='filter-name-input-title filter-categories-input-title'>Enter a game, movie, band, or song</h3>
-              <button className='category-btn input-btn' name='games' onClick={(e) => this.handleClick(e)}>games</button>
-              <button className='category-btn input-btn' name='music' onClick={(e) => this.handleClick(e)}>music</button>
-              <button className='category-btn input-btn' name='authors' onClick={(e) => this.handleClick(e)}>authors</button>
-              <button className='category-btn input-btn' name='movies' onClick={(e) => this.handleClick(e)}>movies</button>
-              <button className='category-btn input-btn' name='shows' onClick={(e) => this.handleClick(e)}>shows</button>
-              <button className='category-btn input-btn' name='books' onClick={(e) => this.handleClick(e)}>books</button>
+              <h3 className='filter-name-input-title filter-categories-input-title'>Select a category</h3>
+              <button type='button' className='category-btn input-btn' name='games' onClick={(e) => this.handleClick(e)}>games</button>
+              <button type='button' className='category-btn input-btn' name='music' onClick={(e) => this.handleClick(e)}>music</button>
+              <button type='button' className='category-btn input-btn' name='authors' onClick={(e) => this.handleClick(e)}>authors</button>
+              <button type='button' className='category-btn input-btn' name='movies' onClick={(e) => this.handleClick(e)}>movies</button>
+              <button type='button' className='category-btn input-btn' name='shows' onClick={(e) => this.handleClick(e)}>shows</button>
+              <button type='button' className='category-btn input-btn' name='books' onClick={(e) => this.handleClick(e)}>books</button>
             </form>
           </div>
         </div>
-        <button className='filter-btn' onClick={(e) => this.handleSubmit(e)}>Find suggestions</button>
+        <button className='filter-btn' type='submit' onClick={(e) => this.handleSubmit(e)}>Find suggestions</button>
       </div>
     )
   }

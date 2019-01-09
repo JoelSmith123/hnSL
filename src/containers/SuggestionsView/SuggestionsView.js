@@ -23,10 +23,16 @@ export class SuggestionsView extends Component {
       <div className='SuggestionsView'>
         <div className='suggestion-cards-container'>
           {
+            this.props.isLoading ? 
+              <h1 className='status-msg'>loading...</h1>
+            :
+            
             this.props.suggestions.Similar ? 
-              this.props.suggestions.Similar.Results.map(suggestion => {
-                return <SuggestionCard {...suggestion} key={uuid()} />
-              })
+              this.props.suggestions.Similar.Results[0] ?
+                this.props.suggestions.Similar.Results.map(suggestion => {
+                  return <SuggestionCard {...suggestion} key={uuid()} />
+                })
+              : <h1 className='status-msg'>Sorry, there were no results!</h1>
             : null
           }
         </div>
@@ -39,7 +45,8 @@ export const mapStateToProps = (state) => {
   return {
     suggestions: state.suggestions,
     filters: state.filters,
-    category: state.category
+    category: state.category,
+    isLoading: state.isLoading
   }
 }
   
