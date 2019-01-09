@@ -89,6 +89,6 @@ describe('mapDispatchToProps', () => {
     const mappedProps = mapDispatchToProps(mockDispatch)
     mappedProps.setCategory('games')
 
-    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    expect(mockDispatch).toBeCalledWith(actionToDispatch)
   })
 })
