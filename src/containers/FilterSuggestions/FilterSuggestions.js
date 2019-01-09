@@ -11,6 +11,7 @@ export class FilterSuggestions extends Component {
       inputs: {'input-0': ''},
       category: '',
       activeBtn: '',
+      error: false
     }
   }
 
@@ -20,12 +21,14 @@ export class FilterSuggestions extends Component {
   }
 
   handleSubmit = (e) => {
-    console.log('ran!!')
     e.preventDefault()
-    console.log(this.state.category[0])
-    this.props.setFilter(this.state.inputs)
-    this.props.setCategory(this.state.category)
-    this.setState({activeBtn: '', category: '', inputs: {}})
+    if (!this.state.inputs['input-0']) {
+      this.setState({error: true})
+    } else {
+      this.props.setFilter(this.state.inputs)
+      this.props.setCategory(this.state.category)
+      this.setState({activeBtn: '', category: '', inputs: {}, error: false})      
+    }
   }
 
   handleClick = (e) => {
@@ -69,6 +72,11 @@ export class FilterSuggestions extends Component {
     return (
       <div className='FilterSuggestions' onKeyPress={this.enterPressed.bind(this)}>
         <h1 className='filter-title'>Filters</h1>
+        {
+          this.state.error ? 
+            <h2 className='status-msg'>Sorry! You must enter a game, movie, band, or song to retrieve suggestions</h2>
+          : null
+        }
         <div className='filter-input-categories-container'>
           <div className='filter-input-form-container'>
             <form className='filter-input-form'>
@@ -99,7 +107,7 @@ export class FilterSuggestions extends Component {
           </div>
           <div className='filter-input-form-container'>
             <form className='input-categories-form' onClick={(e) => this.handleFormClick(e)}>
-              <h3 className='filter-name-input-title filter-categories-input-title'>Enter a game, movie, band, or song</h3>
+              <h3 className='filter-name-input-title filter-categories-input-title'>Select a category</h3>
               <button type='button' className='category-btn input-btn' name='games' onClick={(e) => this.handleClick(e)}>games</button>
               <button type='button' className='category-btn input-btn' name='music' onClick={(e) => this.handleClick(e)}>music</button>
               <button type='button' className='category-btn input-btn' name='authors' onClick={(e) => this.handleClick(e)}>authors</button>

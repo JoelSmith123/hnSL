@@ -14,6 +14,10 @@
   font-size: 3rem;
 }
 
+.status-msg {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 .filter-input-categories-container {
   display: flex;
   flex-direction: row;
