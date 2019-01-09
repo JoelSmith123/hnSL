@@ -58,7 +58,7 @@ export class FilterSuggestions extends Component {
     }
 
     return (
-      <div className='FilterSuggestions'>
+      <div className='FilterSuggestions' onSubmit={(e) => this.handleSubmit(e)}>
         <h1 className='filter-title'>Filters</h1>
         <div className='filter-input-categories-container'>
           <div className='filter-input-form-container'>
@@ -82,6 +82,7 @@ export class FilterSuggestions extends Component {
               }
             </form>
             <button className='add-input-btn input-btn' 
+                    type='button'
                     disabled={Object.keys(this.state.inputs).length >= 4} 
                     onClick={(e) => this.appendInput(e)}>
               +
@@ -90,16 +91,16 @@ export class FilterSuggestions extends Component {
           <div className='filter-input-form-container'>
             <form className='input-categories-form' onClick={(e) => this.handleFormClick(e)}>
               <h3 className='filter-name-input-title filter-categories-input-title'>Enter a game, movie, band, or song</h3>
-              <button className='category-btn input-btn' name='games' onClick={(e) => this.handleClick(e)}>games</button>
-              <button className='category-btn input-btn' name='music' onClick={(e) => this.handleClick(e)}>music</button>
-              <button className='category-btn input-btn' name='authors' onClick={(e) => this.handleClick(e)}>authors</button>
-              <button className='category-btn input-btn' name='movies' onClick={(e) => this.handleClick(e)}>movies</button>
-              <button className='category-btn input-btn' name='shows' onClick={(e) => this.handleClick(e)}>shows</button>
-              <button className='category-btn input-btn' name='books' onClick={(e) => this.handleClick(e)}>books</button>
+              <button type='button' className='category-btn input-btn' name='games' onClick={(e) => this.handleClick(e)}>games</button>
+              <button type='button' className='category-btn input-btn' name='music' onClick={(e) => this.handleClick(e)}>music</button>
+              <button type='button' className='category-btn input-btn' name='authors' onClick={(e) => this.handleClick(e)}>authors</button>
+              <button type='button' className='category-btn input-btn' name='movies' onClick={(e) => this.handleClick(e)}>movies</button>
+              <button type='button' className='category-btn input-btn' name='shows' onClick={(e) => this.handleClick(e)}>shows</button>
+              <button type='button' className='category-btn input-btn' name='books' onClick={(e) => this.handleClick(e)}>books</button>
             </form>
           </div>
         </div>
-        <button className='filter-btn' onClick={(e) => this.handleSubmit(e)}>Find suggestions</button>
+        <button className='filter-btn' type='submit'>Find suggestions</button>
       </div>
     )
   }
