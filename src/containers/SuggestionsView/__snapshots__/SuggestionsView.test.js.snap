@@ -4,7 +4,28 @@ exports[`SuggestionsView should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SuggestionsView
-    fetchSuggestions={[MockFunction]}
+    category="movies"
+    fetchSuggestions={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=red+hot+chili+peppers+&2c+pulp+fiction&k=327282-findstuf-NRPF8M1F&info=1&type=movies",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    filters={
+      Object {
+        "input-0": "red hot chili peppers",
+        "input-1": "pulp fiction",
+      }
+    }
     suggestions={
       Array [
         Object {
