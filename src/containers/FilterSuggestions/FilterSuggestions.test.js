@@ -43,7 +43,7 @@ describe('FilterSuggestions', () => {
 
       wrapper.instance().handleSubmit(mockEvent)
 
-      expect(wrapper.state()).toEqual({activeBtn: '', category: '', inputs: {}})
+      expect(wrapper.state()).toEqual({"activeBtn": "", "category": "", "error": true, "inputs": {}})
     })    
   })
 
@@ -53,7 +53,7 @@ describe('FilterSuggestions', () => {
 
       wrapper.instance().handleClick(mockEvent)
 
-      expect(wrapper.state()).toEqual({category: 'games', activeBtn: 'games', inputs: {}})
+      expect(wrapper.state()).toEqual({"activeBtn": "games", "category": "games", "error": true, "inputs": {}})
     })
   })
 
