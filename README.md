@@ -29,8 +29,8 @@ suggestME's goal is to provide an easy way to find new interests and activities 
   * Redux
   * React Router
   * CSS3
-  * [TasteDive API](https://tastedive.com/read/api)
-  * [Unsplash API](https://unsplash.com/documentation)
+  * [TasteDive API](https://tastedive.com/read/api) for suggestions source
+  * [Unsplash API](https://unsplash.com/documentation) for randomized background wallpapers
 
 ## 
 
