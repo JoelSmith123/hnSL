@@ -1,4 +1,4 @@
-# hnSL
+# suggestME
 
 A React and Redux based app that provides suggestions for games, movies, books, authors and shows based on the user's choice of related titles and/or categories.
 
@@ -6,9 +6,9 @@ A React and Redux based app that provides suggestions for games, movies, books, 
 
 ### Installation 
 ```
-git clone https://github.com/JoelSmith123/hnSL
+git clone https://github.com/JoelSmith123/suggestME
 
-cd hnSL
+cd suggestME
 
 npm install 
 
@@ -19,7 +19,7 @@ npm start
 
 This React/Redux app is a solo project, built with the purpose to practise UI/UX design, React Router implementation, and React/Redux fundamentals. 
 
-hnSL's goal is to provide an easy way to find new interests and activities based on personal tastes. With future iterations, hnSL's UI may be refined or altered based off of user feedback, and features may be added or enhanced.
+suggestME's goal is to provide an easy way to find new interests and activities based on personal tastes. With future iterations, suggestME's UI may be refined or altered based off of user feedback, and features may be added or enhanced.
 
 ##
 
@@ -35,13 +35,13 @@ hnSL's goal is to provide an easy way to find new interests and activities based
 ### Screenshots
 
 #### Welcome screen
-<img width="1440" alt="screen shot 2019-01-09 at 1 13 26 am" src="https://user-images.githubusercontent.com/28921373/50885758-d4adb500-13ab-11e9-94d7-30c5aaa77d53.png">
+<img width="1440" alt="screen shot 2019-02-13 at 12 26 58 pm" src="https://user-images.githubusercontent.com/28921373/52737902-b3338080-2f8a-11e9-95dc-9a3f96d733a0.png">
 
 #### Filter suggestions screen
-<img width="1440" alt="screen shot 2019-01-09 at 1 15 44 am" src="https://user-images.githubusercontent.com/28921373/50885855-20f8f500-13ac-11e9-9be3-d3df9f4fb3f6.png">
+<img width="1440" alt="screen shot 2019-02-13 at 12 28 11 pm" src="https://user-images.githubusercontent.com/28921373/52737983-dfe79800-2f8a-11e9-9487-428663447b08.png">
 
 #### Display suggestions screen
-<img width="1440" alt="screen shot 2019-01-09 at 1 17 04 am" src="https://user-images.githubusercontent.com/28921373/50885930-4f76d000-13ac-11e9-9fa8-2754943aecf7.png">
+<img width="1440" alt="screen shot 2019-02-13 at 12 29 39 pm" src="https://user-images.githubusercontent.com/28921373/52738082-17564480-2f8b-11e9-8b1a-c268a6cb8518.png">
 
 ## 
 
@@ -52,5 +52,5 @@ hnSL's goal is to provide an easy way to find new interests and activities based
 ## 
 
 ### Contributors
- * Joel Smith [GitHub](https://github.com/JoelSmith123) [Twitter](https://twitter.com/j0elsmith123) [LinkedIn](https://www.linkedin.com/in/joelsmith123/)
+ * Joel Smith [GitHub](https://github.com/JoelSmith123) [LinkedIn](https://www.linkedin.com/in/joelsmith123/)
 
